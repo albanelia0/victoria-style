@@ -1,0 +1,33 @@
+.container-booking-data {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* background: #eee; */
+  padding: 20px;
+}
+
+.card {
+  margin: 8px;
+  flex-basis: 100px;
+  text-align: center;
+}
+
+.card-days {
+  cursor: pointer;
+}
+
+.calendar-title {
+  padding-top: 50px;
+  padding-bottom: 25px;
+  font-size: 50px;
+  text-align: center;
+}
+
+.footerCalendar{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 150px;
+}
+hr{
+  background: cadetblue;
+}

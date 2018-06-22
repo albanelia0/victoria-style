@@ -1,0 +1,34 @@
+.card {
+  margin: 8px;
+  flex-basis: 100px;
+  text-align: center;
+}
+
+.calendar-title {
+  padding-top: 50px;
+  padding-bottom: 25px;
+  font-size: 50px;
+  text-align: center;
+}
+
+.content-hours {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center
+}
+
+.card-hours {
+  flex-basis: 230px;
+  cursor: pointer;
+}
+
+.card-hours-inavailable {
+  flex-basis: 230px;
+  cursor: default;
+}
+
+.subtitble-hours{
+  font-size: 20px;
+  text-align: center;
+}

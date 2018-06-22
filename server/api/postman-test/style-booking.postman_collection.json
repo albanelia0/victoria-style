@@ -1,0 +1,379 @@
+{
+	"info": {
+		"_postman_id": "99ca5a43-6eca-43ed-b44d-c2e85c2bf98a",
+		"name": "style-booking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "registerUser",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"maria\",\n\t\"surname\": \"Martes\",\n\t\"email\": \"se4c@gmail.com\",\n\t\"password\": \"123\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/user/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAvailability",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:4000/api/booking/hours/2018/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"booking",
+						"hours",
+						"2018",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create booking",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViMWU2YWNiMzdjZjNjNGIxMDE0NTk0ZCIsImlhdCI6MTUyODcyMDEwOCwiZXhwIjoxNTI4NzM0NTA4fQ.cGTUaZftATzRPgrlRcIaxYcG9wNiNxUID7rfxeyY6Yo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"userId\":\"5b1e6acb37cf3c4b1014594d\",\n\t\"serviceId\":[\"5b1e5db50563e3451098408a\"],\n\t\"date\":\"2018-06-13 15:15\"\n\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/booking",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"booking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "authenticate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"se4c@gmail.com\",\n\t\"password\": \"123\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/auth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViMWU0OGNhOTMzN2IxM2RmNjM3M2NiNiIsImlhdCI6MTUyODcxMTc2MywiZXhwIjoxNTI4NzI2MTYzfQ.z9K4XJrexJ6Cb7jaaVTzmKdXZwjtGLRJZHs7khK8Kmw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\t\"userId\":\"5b1e48ca9337b13df6373cb6\",\n\t\"name\": \"maria\",\n\t\"surname\": \"Martes\",\n\t\"email\": \"se4c@gmail.es\",\n\t\"password\": \"123\",\n\t\"newEmail\": \"pepi@gmail.com\",\n\t\"newPassword\": \"456\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/user/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAvailabilityHours",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"corte de pelo\",\n\t\"duration\": \"30\",\n\t\"price\": \"16\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/booking/hours/2018/6/13",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"booking",
+						"hours",
+						"2018",
+						"6",
+						"13"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listBooking",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViMWU2YWNiMzdjZjNjNGIxMDE0NTk0ZCIsImlhdCI6MTUyODcyMDEwOCwiZXhwIjoxNTI4NzM0NTA4fQ.cGTUaZftATzRPgrlRcIaxYcG9wNiNxUID7rfxeyY6Yo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"userId\":\"5b1e48ca9337b13df6373cb6\",\n\t\"serviceId\":\"\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/booking",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"booking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listBookingUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViMWU2YWNiMzdjZjNjNGIxMDE0NTk0ZCIsImlhdCI6MTUyODcyMDEwOCwiZXhwIjoxNTI4NzM0NTA4fQ.cGTUaZftATzRPgrlRcIaxYcG9wNiNxUID7rfxeyY6Yo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"userId\": \"5b1e58b62f75fc41fae64970\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/booking/user/5b1e6acb37cf3c4b1014594d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"booking",
+						"user",
+						"5b1e6acb37cf3c4b1014594d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteBookingUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViMWU2YWNiMzdjZjNjNGIxMDE0NTk0ZCIsImlhdCI6MTUyODcyMDEwOCwiZXhwIjoxNTI4NzM0NTA4fQ.cGTUaZftATzRPgrlRcIaxYcG9wNiNxUID7rfxeyY6Yo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:4000/api/booking/user/5b1e6b3037cf3c4b1014594e/5b1e6acb37cf3c4b1014594d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"booking",
+						"user",
+						"5b1e6b3037cf3c4b1014594e",
+						"5b1e6acb37cf3c4b1014594d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViMWU1ZDRiMzI2YWE2NDQ5MGFkNDUxNyIsImlhdCI6MTUyODcxOTY2NiwiZXhwIjoxNTI4NzM0MDY2fQ._VX1jiZ67l9ebk8KExcjPBfcWXiO4mzgiHltfCKiSy4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"userId\":\"5b1e6acb37cf3c4b1014594d\",\n\t\"email\": \"se4c@gmail.com\",\n\t\"password\": \"123\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/user/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listServices",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:4000/api/services",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"services"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
