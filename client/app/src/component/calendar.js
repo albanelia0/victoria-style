@@ -78,7 +78,7 @@ class Calendar extends Component {
 
       data.forEach(({ day: bookingDay, bookingHours }) => {
         if (bookingDay === day) {
-          if (bookingHours >= 8) {
+          if (bookingHours > 8) {
             bookingClass = 'has-text-danger'
           } else if (bookingHours >= 1 && bookingHours < 9 ) {
             bookingClass = 'has-text-warning'
