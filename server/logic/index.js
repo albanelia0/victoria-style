@@ -300,10 +300,6 @@ const logic = {
   placeBooking(userId, serviceIds, date) {
     return Promise.resolve()
       .then(() => {
-        //TODO VALIDATIONS
-        // - Comprobar que la hora de inicio de la reserva no sea menor al inicio de jornada
-        //   o mayor al fin de jornada (tirar un error en ese caso)
-
         let totalDuration = 0
 
         if (serviceIds.length <= 0) throw Error("The service is not selected!")

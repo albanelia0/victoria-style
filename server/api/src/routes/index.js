@@ -9,7 +9,6 @@ const router = express.Router()
 const { env: { TOKEN_SECRET, TOKEN_EXP } } = process
 const jwtValidator = jwtValidation(TOKEN_SECRET)
 
-
 router.post('/user', bodyParser.json(), (req, res) => {
   const { body: { name, surname, email, password } } = req
 

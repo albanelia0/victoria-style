@@ -15,7 +15,7 @@ class Calendar extends Component {
     monthDays: 0,
     isChecked: false,
     year: 2018,
-    month: 6,
+    month: '',
     day: 0,
     clickDay:false
   }

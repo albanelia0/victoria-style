@@ -27,7 +27,7 @@ export class Dropdown extends Component {
   componentDidMount() {
     this.setState({
       _month: month,
-      _monthNumber: 6
+      _monthNumber: monthNumber
     })
   }
 
@@ -85,38 +85,33 @@ export class Dropdown extends Component {
     const name = e.target.getAttribute('name')
     if (name == 1) {
       this.setState({
+        _month: monthNames[day.getMonth()],
+        _monthNumber: day.getMonth() +1
+      })
+    } else if (name == 2) {
+      this.setState({
         _month: monthNames[day.getMonth() + 1],
         _monthNumber: day.getMonth() + 2
       })
-    } else if (name == 2) {
+    } else if (name == 3) {
       this.setState({
         _month: monthNames[day.getMonth() + 2],
         _monthNumber: day.getMonth() + 3
       })
-    } else if (name == 3) {
+    } else if (name == 4) {
       this.setState({
         _month: monthNames[day.getMonth() + 3],
         _monthNumber: day.getMonth() + 4
       })
-    } else if (name == 4) {
+    } else if (name == 5) {
       this.setState({
         _month: monthNames[day.getMonth() + 4],
         _monthNumber: day.getMonth() + 5
       })
-    } else if (name == 5) {
-      this.setState({
-        _month: monthNames[day.getMonth() + 5],
-        _monthNumber: day.getMonth() + 6
-      })
     } else if (name == 6) {
       this.setState({
-        _month: monthNames[day.getMonth() + 6],
-        _monthNumber: day.getMonth() + 7
-      })
-    } else if (name == 7) {
-      this.setState({
-        _month: monthNames[day.getMonth() - 5],
-        _monthNumber: day.getMonth() + 8
+        _month: monthNames[0],
+        _monthNumber: day.getMonth() - 6
       })
     } else {
       this.setState({
@@ -179,24 +174,21 @@ export class Dropdown extends Component {
           <div class="dropdown-menu" id="dropdown-menu4" role="menu">
             <div class="dropdown-content">
               <a onClick={this.changeMonth} name="1" class="dropdown-item">
-                {"July"}
-              </a>
-              <a onClick={this.changeMonth} name="2" class="dropdown-item">
                 {"August"}
               </a>
-              <a onClick={this.changeMonth} name="3" class="dropdown-item">
+              <a onClick={this.changeMonth} name="2" class="dropdown-item">
                 {"September"}
               </a>
-              <a onClick={this.changeMonth} name="4" class="dropdown-item">
+              <a onClick={this.changeMonth} name="3" class="dropdown-item">
                 {"October"}
               </a>
-              <a onClick={this.changeMonth} name="5" class="dropdown-item">
+              <a onClick={this.changeMonth} name="4" class="dropdown-item">
                 {"November"}
               </a>
-              <a onClick={this.changeMonth} name="6" class="dropdown-item">
+              <a onClick={this.changeMonth} name="5" class="dropdown-item">
                 {"December"}
               </a>
-              <a onClick={this.changeMonth} name="7" class="dropdown-item">
+              <a onClick={this.changeMonth} name="6" class="dropdown-item">
                 {"January"}
               </a>
             </div>

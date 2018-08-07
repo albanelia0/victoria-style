@@ -13,7 +13,7 @@ console.log(PORT, DB_URL)
 
 mongoose.connect(DB_URL)
   .then(() => {
-    const port = PORT || process.argv[2] || 5000
+    const port = process.argv[2] || PORT || 5000
 
     const app = express()
     app.use(cors())
