@@ -17,7 +17,7 @@
     "data": "file:../data",
     "dotenv": "^5.0.1",
     "express": "^4.16.3",
-    "jsonwebtoken": "^8.2.2",
+    "jsonwebtoken": "^9.0.0",
     "logic": "file:../logic"
   }
 }
